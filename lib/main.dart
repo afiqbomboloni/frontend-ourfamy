@@ -4,6 +4,9 @@ import 'package:ourfamy/model/event.dart';
 import 'package:ourfamy/ui/event/event_detail_page.dart';
 import 'package:ourfamy/ui/event/event_list_page.dart';
 import 'package:ourfamy/ui/article/article_list_page.dart';
+import 'package:ourfamy/ui/home/home_page.dart';
+import 'package:ourfamy/ui/login/login_page.dart';
+import 'package:ourfamy/ui/register/register_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -40,13 +43,16 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      initialRoute: '/eventListPage',
+      initialRoute: '/loginPage',
       routes: {
         '/eventListPage': (context) => EventListPage(),
+        '/loginPage': (context) => LoginPage(),
         '/articleListPage': (context) => ArticleListPage(),
         EventDetailPage.routeName: (context) => EventDetailPage(
               event: ModalRoute.of(context)?.settings.arguments as Event,
             ),
+        '/registerPage': (context) => RegisterPage(),
+        '/homePage': (context) => HomePage(),
       },
     );
   }

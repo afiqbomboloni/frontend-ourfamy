@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ourfamy/model/event.dart';
 import 'package:ourfamy/ui/event/event_detail_page.dart';
+import 'package:ourfamy/widget/footer.dart';
 
 class EventListPage extends StatelessWidget {
   static const routeName = '/eventListPage';
@@ -49,32 +50,7 @@ class EventListPage extends StatelessWidget {
           );
         },
       ),
-      bottomSheet: Container(
-        margin: EdgeInsets.fromLTRB(0, 5, 0, 5),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.home),
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.note),
-            ),
-            IconButton(
-              onPressed: () {
-                // Navigator.pushNamed(context, '/eventListPage');
-              },
-              icon: Icon(Icons.event),
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.people),
-            ),
-          ],
-        ),
-      ),
+      bottomSheet: Footer(),
     );
   }
 
