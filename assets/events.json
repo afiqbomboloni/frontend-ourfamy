@@ -1,0 +1,20 @@
+{
+    "events": [
+        {
+            "id": 1,
+            "nama_event": "Optimalisasi Tumbuh Kembang Anak Untuk Mencetak Generasi Emas",
+            "tanggal": "Jum'at, 11 November 2022",
+            "deskripsi": "Halo, ada kegiatan baru nih. Kali ini kita akan berbincang tentang Optimalisasi Tumbuh Kembang Anak Untuk Mencetak Generasi Emas. Kegiatan ini diadakan secara daring dan bisa kamu ikuti dirumah. Untuk kamu yang ingin mendapatkan sertifikat kehadiran, silakan untuk mendaftar terlebih dahulu dengan klik \"Daftar Gratis\".",
+            "pembicara": "Dr. Bambang",
+            "image": "https://i0.wp.com/jeumalaamal.org/wp-content/uploads/2022/08/3df33aba-b588-4b8b-9211-731afe2d8db3.jpg?fit=1280%2C853&ssl=1"
+        },
+        {
+            "id": 2,
+            "nama_event": "Belajar Membaca dan Menulis: untuk TK dan kelas 1 SD",
+            "tanggal": "Jum'at, 12 November 2022",
+            "deskripsi": "Halo, ada kegiatan baru nih. Kali ini kita akan berbincang tentang Optimalisasi Tumbuh Kembang Anak Untuk Mencetak Generasi Emas. Kegiatan ini diadakan secara daring dan bisa kamu ikuti dirumah. Untuk kamu yang ingin mendapatkan sertifikat kehadiran, silakan untuk mendaftar terlebih dahulu dengan klik \"Daftar Gratis\".",
+            "pembicara": "Budi. S.Pd",
+            "image": "https://www.kalderanews.com/wp-content/uploads/2019/08/Hari-Pertama-Masuk-Sekolah-Dasar-597x381.jpg"
+        }
+    ]
+}
