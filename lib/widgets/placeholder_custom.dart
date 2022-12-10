@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:ourfamy/widgets/article_detail_custom.dart';
+import 'package:ourfamy/widgets/page_coba.dart';
 
 class PlaceHolderCustom extends StatelessWidget {
   final String placeHolderTetx;
@@ -35,7 +35,7 @@ class PlaceHolderCustom extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => ArticleDetailCustomPage(),
+                builder: (context) => CobaPages(),
               ),
             );
           },
