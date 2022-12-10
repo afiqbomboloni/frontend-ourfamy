@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      initialRoute: '/loginPage',
+      initialRoute: '/eventListPage',
       routes: {
         '/eventListPage': (context) => EventListPage(),
         '/loginPage': (context) => LoginPage(),

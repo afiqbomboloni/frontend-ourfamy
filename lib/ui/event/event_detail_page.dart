@@ -1,5 +1,8 @@
 import 'package:ourfamy/model/event.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_linkify/flutter_linkify.dart';
+import 'dart:async';
+import 'package:url_launcher/url_launcher.dart';
 
 class EventDetailPage extends StatelessWidget {
   static const routeName = '/event_detail_page';
@@ -47,12 +50,34 @@ class EventDetailPage extends StatelessWidget {
                     ),
                   ),
                   Container(
+                    margin: EdgeInsets.fromLTRB(10, 10, 10, 0),
+                    child: Text(
+                      'Tanggal:',
+                      style: const TextStyle(
+                        color: Colors.black,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                  Container(
                     margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
                     child: Text(
                       event.tanggal,
                       style: const TextStyle(
                         color: Colors.black,
                         fontSize: 17,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.fromLTRB(10, 10, 10, 0),
+                    child: Text(
+                      'Deskripsi:',
+                      style: const TextStyle(
+                        color: Colors.black,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
@@ -68,20 +93,26 @@ class EventDetailPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 10),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      ElevatedButton(
-                        onPressed: () {},
-                        child: const Text(
-                          'Daftar Gratis',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
+                  Container(
+                    margin: EdgeInsets.fromLTRB(10, 10, 10, 0),
+                    child: Text(
+                      'Link Zoom:',
+                      style: const TextStyle(
+                        color: Colors.black,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
                       ),
-                    ],
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                    child: TextButton(
+                      onPressed: () {},
+                      child: Linkify(
+                        onOpen: _onOpen,
+                        text: event.zoom,
+                      ),
+                    ),
                   ),
                 ],
               ),
@@ -90,5 +121,13 @@ class EventDetailPage extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Future<void> _onOpen(LinkableElement link) async {
+    if (await canLaunch(link.url)) {
+      await launch(link.url);
+    } else {
+      throw 'Could not launch $link';
+    }
   }
 }

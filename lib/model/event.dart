@@ -7,6 +7,7 @@ class Event {
   final String deskripsi;
   final String pembicara;
   final String image;
+  final String zoom;
 
   Event({
     required this.id,
@@ -15,6 +16,7 @@ class Event {
     required this.deskripsi,
     required this.pembicara,
     required this.image,
+    required this.zoom,
   });
 
   factory Event.fromJson(Map<String, dynamic> event) => Event(
@@ -24,6 +26,7 @@ class Event {
         deskripsi: event['deskripsi'],
         pembicara: event['pembicara'],
         image: event['image'],
+        zoom: event['zoom'],
       );
 }
 
