@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
 import 'package:ourfamy/ui/article_page.dart';
-import 'package:ourfamy/widgets/article_detail_custom.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: ArticleDetailCustomPage(),
+      home: ArticlePage(),
     );
   }
 }
