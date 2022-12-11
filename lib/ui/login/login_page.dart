@@ -231,7 +231,7 @@ class _LoginPageState extends State<LoginPage> {
                               : const Text('Log In'),
                           
                           onPressed: () {
-                            Navigator.pushNamed(context, '/homepage');
+                            Navigator.pushNamed(context, '/home-page');
                           },
                         ),
                       ),
