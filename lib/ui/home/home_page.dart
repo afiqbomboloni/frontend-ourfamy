@@ -246,6 +246,7 @@ class _HomePageState extends State<HomePage> {
                         if(snapshot.hasData) {
                           List<EventResult> isiData = snapshot.data!;
                           return ListView.builder(
+                            physics: ClampingScrollPhysics(),
                             scrollDirection: Axis.vertical,
                               shrinkWrap: true,
                             itemCount: isiData.length,
@@ -337,125 +338,6 @@ class _HomePageState extends State<HomePage> {
       bottomSheet: const Footer(),
     );
   }
-
-  // eventList(BuildContext context, EventResult events, EventProvider provider) {
-  //   return Container(
-  //                         height: 330.0,
-  //                         width: 320,
-  //                         decoration: const BoxDecoration(
-  //                           color: Colors.white,
-  //                           borderRadius: BorderRadius.all(
-  //                             Radius.circular(
-  //                               16.0,
-  //                             ),
-  //                           ),
-  //                         ),
-  //                         child: Column(
-                                
-  //                           children: [
-                          
-  //                             Stack(
-  //                               children: [
-  //                                 ClipRRect(
-  //                                   borderRadius: const BorderRadius.only(
-  //                                     topLeft: Radius.circular(12.0),
-  //                                     topRight: Radius.circular(12.0),
-  //                                   ),
-  //                                   child: Image.network(
-  //                                     events.images,
-  //                                     height: 220.0,
-  //                                     width: double.maxFinite,
-  //                                     fit: BoxFit.cover,
-  //                                   ),
-  //                                 ),
-  //                                 Padding(
-  //                                   padding: const EdgeInsets.only(
-  //                                     left: 20,
-  //                                     top: 160.0,
-  //                                   ),
-  //                                   child: Container(
-  //                                     height: 40,
-  //                                     width: 110,
-  //                                     alignment: Alignment.center,
-  //                                     decoration: const BoxDecoration(
-  //                                       color: Colors.white,
-  //                                       borderRadius: BorderRadius.all(
-  //                                         Radius.circular(
-  //                                           16.0,
-  //                                         ),
-  //                                       ),
-  //                                     ),
-  //                                     child: Text(
-  //                                       "Parenting",
-  //                                       style: GoogleFonts.montserrat(
-  //                                         color: Colors.black,
-  //                                         fontSize: 16,
-  //                                         letterSpacing: 1,
-  //                                         fontWeight: FontWeight.bold,
-  //                                       ),
-  //                                     ),
-  //                                   ),
-  //                                 ),
-  //                               ],
-  //                             ),
-  //                             const SizedBox(
-  //                               height: 5.0,
-  //                             ),
-  //                             Padding(
-  //                               padding: const EdgeInsets.all(10),
-  //                               child: Column(
-  //                                 crossAxisAlignment: CrossAxisAlignment.start,
-  //                                 children: [
-  //                                   Text(
-  //                                     events.namaEvent,
-  //                                     style: GoogleFonts.montserrat(
-  //                                       color: Colors.black,
-  //                                       fontSize: 20,
-  //                                       letterSpacing: 1,
-  //                                       fontWeight: FontWeight.bold,
-  //                                     ),
-  //                                   ),
-  //                                   const SizedBox(
-  //                                     height: 16.0,
-  //                                   ),
-  //                                   Row(
-  //                                     children: [
-  //                                       const CircleAvatar(
-  //                                         radius: 16,
-  //                                         backgroundImage: NetworkImage(
-  //                                             'https://picsum.photos/1000'),
-  //                                       ),
-  //                                       const SizedBox(
-  //                                         width: 10.0,
-  //                                       ),
-  //                                       Text(
-  //                                         events.pembicara,
-  //                                         style: GoogleFonts.montserrat(
-  //                                           color: Colors.black,
-  //                                           fontSize: 18,
-  //                                           letterSpacing: 1,
-  //                                           fontWeight: FontWeight.w500,
-  //                                         ),
-  //                                       ),
-  //                                       const Spacer(),
-  //                                       Text(
-  //                                         events.tanggal,
-  //                                         style: GoogleFonts.montserrat(
-  //                                           color: Colors.black,
-  //                                           fontSize: 18,
-  //                                           letterSpacing: 1,
-  //                                           fontWeight: FontWeight.w500,
-  //                                         ),
-  //                                       ),
-  //                                     ],
-  //                                   ),
-  //                                 ],
-  //                               ),
-  //                             ),
-  //                           ],
-  //                         )
-  //   );
-  //                           }
 }
 
 

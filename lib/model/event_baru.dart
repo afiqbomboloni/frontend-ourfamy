@@ -10,6 +10,7 @@ class EventResult {
     String deskripsi;
     String pembicara;
     String images;
+    String link;
     EventResult({
         required this.id,
         required this.namaEvent,
@@ -17,6 +18,7 @@ class EventResult {
         required this.deskripsi,
         required this.pembicara,
         required this.images,
+        required this.link,
     });
 
 
@@ -29,6 +31,7 @@ class EventResult {
         deskripsi: json["deskripsi"],
         pembicara: json["pembicara"],
         images: json["images"],
+        link: json['link'],
       );
     }
 
