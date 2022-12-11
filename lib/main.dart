@@ -3,7 +3,7 @@ import 'package:ourfamy/common/styles.dart';
 import 'package:ourfamy/model/event_baru.dart';
 import 'package:ourfamy/ui/event/event_detail_page.dart';
 import 'package:ourfamy/ui/event/event_list_page.dart';
-import 'package:ourfamy/ui/article/article_list_page.dart';
+import 'package:ourfamy/ui/article/article_page.dart';
 import 'package:ourfamy/ui/home/home_page.dart';
 import 'package:provider/provider.dart';
 import 'package:ourfamy/provider/register_provider.dart';
@@ -59,7 +59,7 @@ class MyApp extends StatelessWidget {
         //       event: ModalRoute.of(context)?.settings.arguments as EventResult(),
         //     ),
         '/registerPage': (context) => const RegisterPage(),
-        '/homepage':(context) => HomePage(),
+        '/home-page':(context) => HomePage(),
       },
     )
     );

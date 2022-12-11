@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ourfamy/ui/home/home_page.dart';
 
 class Footer extends StatelessWidget {
   const Footer({Key? key}) : super(key: key);
@@ -12,7 +13,7 @@ class Footer extends StatelessWidget {
         children: [
           IconButton(
             onPressed: () {
-              Navigator.pushNamed(context, '/homePage');
+              Navigator.pushNamed(context, '/home-page');
             },
             icon: const Icon(Icons.home),
           ),

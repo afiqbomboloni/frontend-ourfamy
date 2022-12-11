@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:developer';
 import 'dart:io';
 import 'package:http/http.dart' as http;
+import 'package:ourfamy/model/article.dart';
 import 'package:ourfamy/model/event_baru.dart';
 import 'package:ourfamy/model/signup.dart';
 
@@ -43,10 +44,6 @@ class ApiService {
       throw Exception('Gagal menampilkan daftar Event');
   }
 
-  
-
-
-
 }
 Future <EventResult> getEventById(String id) async {
     final response = await http.get(Uri.parse("http://10.0.2.2:3000/api/events/$id"));
@@ -58,8 +55,20 @@ Future <EventResult> getEventById(String id) async {
     } else {
       throw Exception('Gagal menampilkan daftar Event');
   }
+}
 
 
+  Future <List<Article>> getArticle() async {
+    final response = await http.get(Uri.parse("http://10.0.2.2:3000/api/articles/"));
+    if (response.statusCode == 200) {
+      
+      List jsonResponse = json.decode(response.body);
+      return jsonResponse.map((data) => Article.fromJson(data)).toList();
+      
+    } else {
+      throw Exception('Gagal menampilkan daftar Artikel');
+  }
 
 }
+
 }

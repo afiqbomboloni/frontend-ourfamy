@@ -119,7 +119,7 @@ class _EventDetailPageState extends State<EventDetailPage> {
                       onPressed: () {},
                       child: Linkify(
                         onOpen: _onOpen,
-                        text: widget.event.images,
+                        text: widget.event.link,
                       ),
                     ),
                   ),
